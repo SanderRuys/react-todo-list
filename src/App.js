@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+//import hooks
+import TodoList from "./TodoList";
+import "./styles/App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React @ Becode
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        //TODO: Add todo list (maybe form)
+        <>
+        <TodoList />
+        <div class="paper">
+            <div class="lines">
+                <div class="text">
+                    <form>
+                        <h1>Todo List</h1>
+                        <input type="text" placeholder="Add a todo"/>
+                        <button>Clear list</button>
+                        <p>some text</p>
+                    </form>
+                </div>
+            </div>
+            <div class="holes hole-top"></div>
+            <div class="holes hole-middle"></div>
+            <div class="holes hole-bottom"></div>
+        </div>
+        </>
+    )
 }
 
 export default App;
