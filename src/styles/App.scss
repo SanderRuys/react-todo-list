@@ -7,21 +7,22 @@ body {
 }
 .paper {
     position: absolute;
-    height: 60vh;
+    height: 70vh;
     width: 30vw;
-    background: rgba(255, 255, 255, 0.9);
+    background: $paperWhite;
+    margin-top: 15vh;
     margin-left: 35vw;
-    box-shadow: 0px 0px 5px 0px #888;
+    box-shadow: 0px 0px 5px 0px $shadowColor;
 
     .lines {
         margin-top: 3rem;
         height: calc(100% - 3rem);
         width: 100%;
-        background-image: repeating-linear-gradient(white 0px, white 1.5rem, steelblue 1.6rem);
+        background-image: repeating-linear-gradient(white 0px, white 1.5rem, $blueLine 1.6rem);
 
         .text {
             position: absolute;
-            top: 65px;
+            top: 1.95rem;
             left: 55px;
             bottom: 10px;
             right: 10px;
@@ -29,9 +30,18 @@ body {
             font-family: $textFont;
             overflow: hidden;
             outline: none;
+            color: $textColor;
+
+            input {
+                border: none;
+                background-color: $blueLine;
+                color: $paperWhite;
+            }
+            ::placeholder {
+                    color: $paperWhite;
+                }
         }
     }
-    
 }
 .paper::before {
     content: "";
@@ -39,7 +49,7 @@ body {
     left: 45px;
     height: 100%;
     width: 2px;
-    background: rgba(255, 0, 0, 0.4);
+    background: $redLine;
 }
 
 .holes {
@@ -49,7 +59,7 @@ body {
     width: 25px;
     background: $backgroundColor;
     border-radius: 50%;
-    box-shadow: inset 0px 0px 2px 0px #888;
+    box-shadow: inset 0px 0px 2px 0px $shadowColor;
 }
 .hole-top {
     top: 10%;
